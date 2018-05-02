@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to the game!</h1>
+
+  <div ng-if="!main.loggedIn">
+    <p>Login or sign up.</p>
+    <a href="/login" class="btn btn-primary">Login</a>
+    <a href="/signup" class="btn btn-primary">Sign Up</a>
+  </div>
+
+  <div ng-if="main.loggedIn">
+    <p>Go to your profile</p>
+    <a href="/profile" class="btn btn-primary">Profile</a>
+      <p>Go to your battle</p>
+      <a href="/game" class="btn btn-primary">Game</a>
+  </div>
+</div>

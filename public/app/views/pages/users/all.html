@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>
+		Profile
+	</h1>
+
+</div>
+
+<div class="jumbotron text-center" ng-show="user.processing">
+  <span class="glyphicon glyphicon-repeat spinner"></span>
+  <p>Loading Users...</p>
+</div>
+
+<table class="table table-bordered table-striped" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Kills</th>
+      <th>Level</th>
+      <th class="col-sm-2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.kills }}</td>
+      <td>{{ user.level }}</td>
+      <td class="col-sm-2">
+        <a ng-href="/profile/{{ user._id }}" class="btn btn-danger">Edit</a>
+        <a href="#" ng-click="user.deleteUser(user._id)" class="btn btn-primary">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

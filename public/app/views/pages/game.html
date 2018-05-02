@@ -1,0 +1,33 @@
+	<div id="game">
+		<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;	"></canvas>
+ </div>
+
+ <div class="row chat">
+	 <div class="col-xs-9 chat-window">
+		 <ul>
+			 <li class="noselect" ng-repeat="message in messages">
+				 <span class="username noselect">{{message.username}} :</span>
+				 <span class="message noselect">{{message.message}}</span>
+			 </li>
+		 </ul>
+	 </div>
+	  <div class="col-xs-3 user-window">
+			<h4 class="noselect">Current Users</h4>
+			<ul>
+				<li ng-repeat="user in users" class="noselect">{{user}}<li>
+			</ul>
+		</div>
+ </div>
+
+ <div class="row">
+	 <form class="form-horizontal">
+		 <div class="form-group">
+			 <div class="col-sm-9">
+				 	<input type="text" class="form-control" id="chatInput" placeholder="Your Message" ng-model="msg">
+				</div>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btn-primary" ng-click="sendMessage(msg)">Send</button>
+			 </div>
+		 </div>
+	 </form>
+ </div>
